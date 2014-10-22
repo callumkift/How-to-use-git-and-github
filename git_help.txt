@@ -44,3 +44,9 @@ All of the below can be found at 'git --help'
 
 'git branch' + name: This creates a new branch at this point, called name
 'git checkout' + branchName: This changes which branch you are working on
+ 
+-- We can view the commit history of different branches, i.e. when they
+-- left the master branch by the command below
+
+'git log --graph --oneline'+master +branch1: this let's us see when the
+			branch seperates and all the relative commits
