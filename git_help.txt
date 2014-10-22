@@ -33,3 +33,14 @@ All of the below can be found at 'git --help'
 'git reset --head': this deletes all things that have not been committed
 			and obviously none of these changes will have
 			been saved
+
+-- We can branch off the 'master branch' to try experimental features etc
+-- and any changes to the new branch will not affect the master branch. 
+-- These branches can then be rejoined later, merged. 
+
+'git branch': This shows which branches you have in your repository, if
+		there are more than one branch, the current branch that 
+		you are working in will be denoted with a '*'
+
+'git branch' + name: This creates a new branch at this point, called name
+'git checkout' + branchName: This changes which branch you are working on
