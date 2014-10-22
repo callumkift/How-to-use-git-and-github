@@ -29,3 +29,7 @@ All of the below can be found at 'git --help'
 'git diff': this compares the working directory with the staging area
 'git diff --staged': this compares the staging area and the repository
 'git diff commit1 commit2': compares two commits in the repository
+
+'git reset --head': this deletes all things that have not been committed
+			and obviously none of these changes will have
+			been saved
