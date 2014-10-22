@@ -6,15 +6,26 @@ All of the below can be found at 'git --help'
 
 'git log' : this shows the history of the commits
 
-'git diff ' + commit#old commit#new: this shows the differences between two commits
+'git diff ' + commit1 commit2: this shows the differences between two 
+		commits
 
 'git checkout ' + commit#: this will take you back to that version
 
 'git checkout origins/HEAD': this takes you back to your latest version
 
-'git init': this initialises the repository you are in and makes it 'git-able'
+'git init': this initialises the repository you are in and makes it 
+		'git-able'
 
-Before making the commit, git puts the files to be committed in a 'staging area' and then
-all files in this staging area will be committed at the same time.
+-- Before making the commit, git puts the files to be committed in a 
+-- 'staging area' and then all files in this staging area will be 
+-- committed at the same time.
 
 'git add': adds a file to the staging area
+
+-- We can view the differences between all three pieces in the git model,
+-- by this I mean the working directory, the staging area and the git 
+-- repository. 
+
+'git diff': this compares the working directory with the staging area
+'git diff --staged': this compares the staging area and the repository
+'git diff commit1 commit2': compares two commits in the repository
