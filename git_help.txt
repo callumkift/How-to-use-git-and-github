@@ -50,3 +50,19 @@ All of the below can be found at 'git --help'
 
 'git log --graph --oneline'+master +branch1: this let's us see when the
 			branch seperates and all the relative commits
+
+-- Git commits follow backwards lineage, so that if we branch we are no 
+-- longer privy to the commits on the other branch unless we checkout to
+-- that branch and check the log, this in turn will no longer let us see
+-- the commits of the former branch. This is where the above command 
+-- comes in handy. 
+-- If we are on a branch and checkout to a former commit and then make 
+-- a new commit from there, once we return to the head of the branch and
+-- check the log of the branch we no longer see this latest commit. This
+-- is why we get the warning of the detached HEAD. If we want to be able 
+-- to get back to this new commit, we have to make a branch at that
+-- pont. To do so we make the following command while still on this new 
+-- commit:
+
+'git checkout -b new_branch_name': this creates a new branch and moves 
+					straight to it 
