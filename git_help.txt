@@ -1,100 +1,129 @@
----------------------------------------------
-All of the below can be found at 'git --help'
----------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+All of the commands below can be found at 'git --help'
+------------------------------------------------------
+------------------------------------------------------
 
-'git clone ' + url: this clones the git repository that is at the url
 
-'git log' : this shows the history of the commits.
-'git log -n #': this shows the last # commits
+Some simple commands
+--------------------
 
-'git diff ' + commit1 commit2: this shows the differences between two 
+
+*) 'git clone ' + url: this clones the git repository that is at the url
+
+*) 'git log' : this shows the history of the commits.
+*) 'git log -n #': this shows the last # commits
+
+*) 'git diff ' + commit1 commit2: this shows the differences between two 
 		commits
 
-'git checkout ' + commit#: this will take you back to that version
+*) 'git checkout ' + commit#: this will take you back to that version
 
-'git checkout origins/HEAD': this takes you back to your latest version
+*) 'git checkout origins/HEAD': this takes you back to your latest version
 
-'git init': this initialises the repository you are in and makes it 
+*) 'git init': this initialises the repository you are in and makes it 
 		'git-able'
+--------------------
 
--- Before making the commit, git puts the files to be committed in a 
--- 'staging area' and then all files in this staging area will be 
--- committed at the same time.
 
-'git add': adds a file to the staging area
 
--- We can view the differences between all three pieces in the git model,
--- by this I mean the working directory, the staging area and the git 
--- repository. 
+The three areas - working area, staging area, repository
+--------------------------------------------------------
 
-'git diff': this compares the working directory with the staging area
-'git diff --staged': this compares the staging area and the repository
-'git diff commit1 commit2': compares two commits in the repository
 
-'git reset --head': this deletes all things that have not been committed
-			and obviously none of these changes will have
-			been saved
+Before making the commit, git puts the files to be committed in a 
+*) 'staging area' and then all files in this staging area will be 
+committed at the same time.
 
--- We can branch off the 'master branch' to try experimental features etc
--- and any changes to the new branch will not affect the master branch. 
--- These branches can then be rejoined later, merged. 
+*) 'git add file': adds a file to the staging area
+*) 'git commit file': commits a file to the repository
 
-'git branch': This shows which branches you have in your repository, if
+We can view the differences between all three pieces in the git model,
+by this I mean the working directory, the staging area and the git 
+repository. 
+
+*) 'git diff': this compares the working directory with the staging area
+*) 'git diff --staged': this compares the staging area and the repository
+*) 'git diff commit1 commit2': compares two commits in the repository
+
+*) 'git reset --head': this deletes all things that have not been committed
+		and obviously none of these changes will have been saved
+--------------------------------------------------------
+
+
+
+Branches
+--------
+
+
+We can branch off the 'master branch' to try experimental features etc
+and any changes to the new branch will not affect the master branch. 
+These branches can then be rejoined later, merged. 
+
+*) 'git branch': This shows which branches you have in your repository, if
 		there are more than one branch, the current branch that 
 		you are working in will be denoted with a '*'
 
-'git branch' + name: This creates a new branch at this point, called name
-'git checkout' + branchName: This changes which branch you are working on
+*) 'git branch' + name: This creates a new branch at this point, called name
+*) 'git checkout' + branchName: This changes which branch you are working on
  
--- We can view the commit history of different branches, i.e. when they
--- left the master branch by the command below
+We can view the commit history of different branches, i.e. when they
+left the master branch by the command below
 
-'git log --graph --oneline'+master +branch1: this let's us see when the
-			branch seperates and all the relative commits
+*) 'git log --graph --oneline'+master +branch1: this let's us see when the
+		branch seperates and all the relative commits
 
--- Git commits follow backwards lineage, so that if we branch we are no 
--- longer privy to the commits on the other branch unless we checkout to
--- that branch and check the log, this in turn will no longer let us see
--- the commits of the former branch. This is where the above command 
--- comes in handy. 
--- If we are on a branch and checkout to a former commit and then make 
--- a new commit from there, once we return to the head of the branch and
--- check the log of the branch we no longer see this latest commit. This
--- is why we get the warning of the detached HEAD. If we want to be able 
--- to get back to this new commit, we have to make a branch at that
--- pont. To do so we make the following command while still on this new 
--- commit:
+Git commits follow backwards lineage, so that if we branch we are no 
+longer privy to the commits on the other branch unless we checkout to
+that branch and check the log, this in turn will no longer let us see
+the commits of the former branch. This is where the above command 
+comes in handy. 
+If we are on a branch and checkout to a former commit and then make 
+a new commit from there, once we return to the head of the branch and
+check the log of the branch we no longer see this latest commit. This
+is why we get the warning of the detached HEAD. If we want to be able 
+to get back to this new commit, we have to make a branch at that
+pont. To do so we make the following command while still on this new 
+commit:
 
-'git checkout -b new_branch_name': this creates a new branch and moves 
-					straight to it 
+*) 'git checkout -b new_branch_name': this creates a new branch and moves 
+		straight to it 
+--------
 
--- To merge two branches one uses the command below. It merges the second
--- branch into the first one. It checks with all the past commits since 
--- the two branches separated to see which lines of code should be kept
--- and which should be deleted. In the log it will keep all the commits 
--- from the two branches and order them by their timestamp. As the 
--- commits are now sorted by their timestamp, the commit below might not
--- be the parent commit, so by using the 'diff' command we see far too 
--- many changes. However, if we use the 'show' command, it shows the 
--- differences with parent commit. Now that we have merged the two 
--- branches, we no longer need to keep the label of branch2 and so we 
--- delete that as all of its commits are now in branch1. Git will merge
--- the branches as best as it can, but brings to attention any possible
--- ambiguity.
 
-'git merge branch1 branch2': Merges branch2 into branch1
 
-'git show commit#': Shows the difference between commit# and its parent
+Merging branches
+----------------					
 
-'git branch -d branch2': Deletes the tag of branch2. This is done after
+
+To merge two branches one uses the command below. It merges the second
+branch into the first one. It checks with all the past commits since 
+the two branches separated to see which lines of code should be kept
+and which should be deleted. In the log it will keep all the commits 
+from the two branches and order them by their timestamp. As the 
+commits are now sorted by their timestamp, the commit below might not
+be the parent commit, so by using the 'diff' command we see far too 
+many changes. However, if we use the 'show' command, it shows the 
+differences with parent commit. Now that we have merged the two 
+branches, we no longer need to keep the label of branch2 and so we 
+delete that as all of its commits are now in branch1. Git will merge
+the branches as best as it can, but brings to attention any possible
+ambiguity.
+
+*) 'git merge branch1 branch2': Merges branch2 into branch1
+
+*) 'git show commit#': Shows the difference between commit# and its parent
+
+*) 'git branch -d branch2': Deletes the tag of branch2. This is done after
 		merging with another branch. If done before merging, it 
 		will make all the commits in the branch unobtainable - 
 		i.e. it removes the branch.
 
--- When there is an ambiguity in the merging of two branches, git 
--- requires the coder to solve the problem. After one has made the merge
--- command, git brings the merge conflict to the coder's attention, and
--- instructs the coder to fix the conflicts before committing. One then
--- just needs to open the conflicted file (git tells you this). The file
--- opens at the conflict and signifies the conflict. Once the conflict 
--- is resolved and saved, one just needs to commit it like usual.
+When there is an ambiguity in the merging of two branches, git 
+requires the coder to solve the problem. After one has made the merge
+command, git brings the merge conflict to the coder's attention, and
+instructs the coder to fix the conflicts before committing. One then
+just needs to open the conflicted file (git tells you this). The file
+opens at the conflict and signifies the conflict. Once the conflict 
+is resolved and saved, one just needs to commit it like usual.
+----------------
