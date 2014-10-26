@@ -48,3 +48,18 @@ uses the command
 
 where remoteName is the name given to your remote when it was setup and 
 branchName is the branch one wants to push.
+----------------------
+
+
+
+Pulling from your remote
+------------------------
+
+If changes have been made to the remote - this can be from another 
+something one has commited from another computer, on github itself or
+by a colleague - one would like to get those changes on the local 
+system. To do this, use the command
+
+*) 'git pull remoteName branchName'
+
+where we have our 'usual-suspects'.
