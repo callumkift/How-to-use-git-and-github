@@ -89,3 +89,11 @@ All of the below can be found at 'git --help'
 		merging with another branch. If done before merging, it 
 		will make all the commits in the branch unobtainable - 
 		i.e. it removes the branch.
+
+-- When there is an ambiguity in the merging of two branches, git 
+-- requires the coder to solve the problem. After one has made the merge
+-- command, git brings the merge conflict to the coder's attention, and
+-- instructs the coder to fix the conflicts before committing. One then
+-- just needs to open the conflicted file (git tells you this). The file
+-- opens at the conflict and signifies the conflict. Once the conflict 
+-- is resolved and saved, one just needs to commit it like usual.
