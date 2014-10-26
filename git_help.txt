@@ -77,7 +77,9 @@ All of the below can be found at 'git --help'
 -- many changes. However, if we use the 'show' command, it shows the 
 -- differences with parent commit. Now that we have merged the two 
 -- branches, we no longer need to keep the label of branch2 and so we 
--- delete that as all of its commits are now in branch1.
+-- delete that as all of its commits are now in branch1. Git will merge
+-- the branches as best as it can, but brings to attention any possible
+-- ambiguity.
 
 'git merge branch1 branch2': Merges branch2 into branch1
 
