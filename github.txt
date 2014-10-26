@@ -1,0 +1,50 @@
+How to 'link' local repository to GitHub
+----------------------------------------
+----------------------------------------
+
+
+
+Setting up a remote
+-------------------
+
+A repository on GitHub is known as a remote - as it is not on one's local
+system. One can see what remote repositories are connected to one's local
+repository with the command
+
+*) 'git remote'
+
+If this command returns nothing, then there is no remote repository
+connected to the local git repository. To add a remote repository, one 
+needs to add a repository on GitHub and name it. One will then be given 
+the info to add this remote repository to the local one. The command to
+add this remote repository is
+
+*) 'git remote add remoteName remoteRepoURL'
+
+where one can call remoteName whatever one pleases - if there is only one
+remote associated with your local repository, it is custom to call it
+'origin'. The remoteRepoURL is given on GitHub once the remote has been 
+corrected.
+
+Running 'git remote' again should now give an output of 'remoteName'. For
+more information about the remote, the command 
+
+*) 'git remote -v'
+
+should be used, here '-v' stands for verbose. This will show the url that
+the local fetches data from and the url it pushes data to. Normally these
+will be the same.
+-------------------
+
+
+
+Pushing to your remote
+----------------------
+
+To push to your remote, i.e. to send all new commits to the remote, one 
+uses the command
+
+*) 'git push remoteName branchName'
+
+where remoteName is the name given to your remote when it was setup and 
+branchName is the branch one wants to push.
