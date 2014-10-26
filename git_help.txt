@@ -4,7 +4,8 @@ All of the below can be found at 'git --help'
 
 'git clone ' + url: this clones the git repository that is at the url
 
-'git log' : this shows the history of the commits
+'git log' : this shows the history of the commits.
+'git log -n #': this shows the last # commits
 
 'git diff ' + commit1 commit2: this shows the differences between two 
 		commits
