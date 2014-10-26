@@ -66,3 +66,24 @@ All of the below can be found at 'git --help'
 
 'git checkout -b new_branch_name': this creates a new branch and moves 
 					straight to it 
+
+-- To merge two branches one uses the command below. It merges the second
+-- branch into the first one. It checks with all the past commits since 
+-- the two branches separated to see which lines of code should be kept
+-- and which should be deleted. In the log it will keep all the commits 
+-- from the two branches and order them by their timestamp. As the 
+-- commits are now sorted by their timestamp, the commit below might not
+-- be the parent commit, so by using the 'diff' command we see far too 
+-- many changes. However, if we use the 'show' command, it shows the 
+-- differences with parent commit. Now that we have merged the two 
+-- branches, we no longer need to keep the label of branch2 and so we 
+-- delete that as all of its commits are now in branch1.
+
+'git merge branch1 branch2': Merges branch2 into branch1
+
+'git show commit#': Shows the difference between commit# and its parent
+
+'git branch -d branch2': Deletes the tag of branch2. This is done after
+		merging with another branch. If done before merging, it 
+		will make all the commits in the branch unobtainable - 
+		i.e. it removes the branch.
