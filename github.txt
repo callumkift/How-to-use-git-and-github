@@ -101,3 +101,23 @@ local system. One can then see the differences between the local
 repository and the most up to date remote one. If there are any 
 differences, it is then simple to view it and then merge them using the
 standard methods before 'pushing' to the remote to update it again.
+
+
+
+Pull requests
+-------------
+
+When collaborating with somebody on GitHub and you want them to agree 
+with a change before merging with the master, you can push the change in 
+a new branch and make a 'pull request'. This allows your collaborator to 
+know that you want to merge this change into master. When this 'pull 
+request' has been made, an email will be sent to the collaborator 
+letting thm know about your request. They can then view, comment or 
+accept this request. More commits and comments can be made (i.e. this 
+can go back and forth indefinitely) until the decision has been made 
+whether to merge or not. 
+
+If there is a conflict with pull requests, GitHub requires the user to 
+sort out this conflict locally before pushing back to GitHub. So this 
+would probably require pulling the latest 'origin/master' to the local 
+system.
