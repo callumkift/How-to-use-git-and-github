@@ -63,3 +63,14 @@ system. To do this, use the command
 *) 'git pull remoteName branchName'
 
 where we have our 'usual-suspects'.
+
+
+
+Forking
+-------
+
+This is a feature of GitHub. It lets you 'clone' somebody else's
+repository on GitHub to your own GitHub account. You can then pull this
+repository to your local machine and work like one would normally. GitHub
+tracks how many people have forked your repository and all these forked
+repositories link back to the original, allowing for just credit.
