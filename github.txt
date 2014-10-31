@@ -84,3 +84,20 @@ Collaboration
 You can collaborate on GitHub. To do this one must allow other users to
 push to the repository. This is easily set up by changing the settings
 on the repository to allow certain people to push to it.
+
+
+
+Collaboration conflicts
+-----------------------
+
+Git saves a copy of the remote repository everytime you push/pull to it. 
+To update this saved copy, one should run the command
+
+
+*) 'git fetch'
+
+Git will then save the latest version of the remote repository on your 
+local system. One can then see the differences between the local 
+repository and the most up to date remote one. If there are any 
+differences, it is then simple to view it and then merge them using the
+standard methods before 'pushing' to the remote to update it again.
