@@ -70,7 +70,17 @@ Forking
 -------
 
 This is a feature of GitHub. It lets you 'clone' somebody else's
-repository on GitHub to your own GitHub account. You can then pull this
-repository to your local machine and work like one would normally. GitHub
-tracks how many people have forked your repository and all these forked
+repository on GitHub to your own GitHub account. You can then clone this
+repository to your local machine and work like one would normally - this 
+automatically sets up the GitHub repository as the remote. GitHub tracks 
+how many people have forked your repository and all these forked 
 repositories link back to the original, allowing for just credit.
+
+
+
+Collaboration
+-------------
+
+You can collaborate on GitHub. To do this one must allow other users to
+push to the repository. This is easily set up by changing the settings
+on the repository to allow certain people to push to it.
