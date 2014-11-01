@@ -23,6 +23,10 @@ Some simple commands
 
 *) 'git init': this initialises the repository you are in and makes it 
 		'git-able'
+
+*) 'git reset --hard commit#': this resets the head of the branch back to
+		the commit#. N.B. all commits infron of this will be 
+		lost.
 --------------------
 
 
